@@ -15,12 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var loginBarView: UIView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 注册手势收回键盘
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGesture)))
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // 设置控件数据
+        let url = Bundle.main.url(forResource: "LoginBackground", withExtension: "gif")!
+        let data = try! Data(contentsOf: url)
+        webView.load(data, mimeType: "image/gif", textEncodingName: "UTF-8", baseURL: NSURL() as URL)
+        loginBarView.backgroundColor = UIColor.init(white: 0, alpha: 0.7)
         
     }
     
@@ -32,6 +45,13 @@ class ViewController: UIViewController {
         
     }
     
+    func tapGesture(sender: UITapGestureRecognizer) {
+        if sender.state == .ended { 
+            usernameField.resignFirstResponder()
+            passwordField.resignFirstResponder()
+        }  
+        sender.cancelsTouchesInView = false 
+    }
     
 }
 

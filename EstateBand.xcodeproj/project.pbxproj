@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E7C378251EEC84E400E98D15 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C378241EEC84E400E98D15 /* SignupViewController.swift */; };
+		E7C378281EEC9E3500E98D15 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */; };
+		E7C3782A1EED4D8400E98D15 /* LoginBackground.gif in Resources */ = {isa = PBXBuildFile; fileRef = E7C378291EED4D8400E98D15 /* LoginBackground.gif */; };
 		E7CDA0BA1EEC59B90061E72F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDA0B91EEC59B90061E72F /* AppDelegate.swift */; };
 		E7CDA0BC1EEC59B90061E72F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDA0BB1EEC59B90061E72F /* ViewController.swift */; };
 		E7CDA0BF1EEC59B90061E72F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CDA0BD1EEC59B90061E72F /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		E7C378241EEC84E400E98D15 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		E7C378291EED4D8400E98D15 /* LoginBackground.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = LoginBackground.gif; path = Resource/LoginBackground.gif; sourceTree = "<group>"; };
 		E7CDA0B61EEC59B90061E72F /* EstateBand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstateBand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CDA0B91EEC59B90061E72F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7CDA0BB1EEC59B90061E72F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C378281EEC9E3500E98D15 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7C378261EEC9E3500E98D15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E7CDA0AD1EEC59B90061E72F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,7 @@
 				E7CDA0D01EEC59B90061E72F /* EstateBandTests */,
 				E7CDA0DB1EEC59B90061E72F /* EstateBandUITests */,
 				E7CDA0B71EEC59B90061E72F /* Products */,
+				E7C378261EEC9E3500E98D15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +149,7 @@
 		E7CDA0EE1EEC67830061E72F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E7C378291EED4D8400E98D15 /* LoginBackground.gif */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -250,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C3782A1EED4D8400E98D15 /* LoginBackground.gif in Resources */,
 				E7CDA0C71EEC59B90061E72F /* LaunchScreen.storyboard in Resources */,
 				E7CDA0C41EEC59B90061E72F /* Assets.xcassets in Resources */,
 				E7CDA0BF1EEC59B90061E72F /* Main.storyboard in Resources */,
