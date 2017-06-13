@@ -23,17 +23,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 设置控件数据
+        let url = Bundle.main.url(forResource: "LoginBackground", withExtension: "gif")!
+        let data = try! Data(contentsOf: url)
+        webView.load(data, mimeType: "image/gif", textEncodingName: "UTF-8", baseURL: NSURL() as URL)
+        loginBarView.backgroundColor = UIColor.init(white: 0, alpha: 0.7)
         // 注册手势收回键盘
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGesture)))
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // 设置控件数据
-        let url = Bundle.main.url(forResource: "LoginBackground", withExtension: "gif")!
-        let data = try! Data(contentsOf: url)
-        webView.load(data, mimeType: "image/gif", textEncodingName: "UTF-8", baseURL: NSURL() as URL)
-        loginBarView.backgroundColor = UIColor.init(white: 0, alpha: 0.7)
         
     }
     
