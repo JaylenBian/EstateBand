@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  EstateBand
 //
-//  Created by Minecode on 2017/6/11.
+//  Created by Minecode on 2017/6/12.
 //  Copyright © 2017年 org.minecode. All rights reserved.
 //
 
@@ -16,12 +16,13 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var acount: String?
+    @NSManaged public var account: String?
     @NSManaged public var id: Int32
     @NSManaged public var name: String?
     @NSManaged public var password: String?
     @NSManaged public var restInterval: Int32
-    @NSManaged public var age: Int32
+    @NSManaged public var sex: Bool
+    @NSManaged public var workNumber: Int32
     @NSManaged public var heartRate: NSSet?
 
 }

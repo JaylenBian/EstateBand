@@ -38,11 +38,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func signupAction(_ sender: UIButton) {
-        
+        if (usernameField.text?.hasPrefix("admin"))! {
+            performSegue(withIdentifier: "segue2Admin", sender: self)
+        } 
+        else if (usernameField.text?.hasPrefix("user"))! {
+            performSegue(withIdentifier: "segue2User", sender: self)
+        }
     }
     
     func tapGesture(sender: UITapGestureRecognizer) {
@@ -52,6 +53,10 @@ class ViewController: UIViewController {
         }  
         sender.cancelsTouchesInView = false 
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//    }
     
 }
 

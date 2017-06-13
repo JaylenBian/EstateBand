@@ -6,16 +6,17 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="heartRate" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="acount" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="restInterval" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="workNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="heartRate" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HeartRate" inverseName="user" inverseEntity="HeartRate" syncable="YES"/>
     </entity>
     <elements>
         <element name="HeartRate" positionX="-54" positionY="27" width="128" height="88"/>
-        <element name="User" positionX="-353" positionY="-33" width="119" height="148"/>
+        <element name="User" positionX="-353" positionY="-33" width="119" height="165"/>
     </elements>
 </model>

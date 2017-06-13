@@ -7,29 +7,103 @@
 //
 
 import UIKit
+import CoreData
 
 class SignupViewController: UIViewController {
     
-    
+    // Widget data
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var accountField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var idField: UITextField!
+    @IBOutlet weak var workNumberField: UITextField!
+    @IBOutlet weak var maleButton: UIButton!
+    @IBOutlet weak var femaleButton: UIButton!
+    @IBOutlet weak var signupView: UIView!
 
+    // Data
+    var appDelegate: AppDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // 设置背景
         self.view.backgroundColor = UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1.0)
+        self.signupView.backgroundColor = UIColor.init(white: 1.0, alpha: 0.95)
+        self.signupView.layer.cornerRadius = 15
+        
+        // 初始化数据
+        self.appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        // 注册收回键盘手势
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGesture)))
     }
     
     @IBAction func doneAction(_ sender: UIButton) {
         // 保存数据
-        
+        saveContext()
         // 弹窗提醒
-        let alert = UIAlertController.init(title: "Success", message: "Registered successfully", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Confirm", style: .cancel, handler: {
-            (action) in self.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
+        
     }
     
+    @IBAction func sexSelectAction(_ sender: UIButton) {
+        switch sender.tag {
+        case 100:
+            maleButton.isSelected = true
+            femaleButton.isSelected = false
+        case 101:
+            maleButton.isSelected = false
+            femaleButton.isSelected = true
+        default:
+            break
+        }
+    }
     
+    func saveContext() {
+        
+        
+        //
+        var done = (nameField.text != nil) && (accountField.text != nil) && (passwordField.text != nil) && (idField.text != nil) && (workNumberField.text != nil)
+        if(done) {
+            // 保存添加模型
+            let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: self.appDelegate.managedObjectContext) as! User
+            user.name = nameField.text
+            user.account = accountField.text
+            user.password = passwordField.text
+            user.id = Int32.init(idField.text!)!
+            user.workNumber = Int32.init(workNumberField.text!)!
+            user.sex = maleButton.state==UIControlState.selected ? true : false
+            // 弹窗提醒
+            do {
+                try self.appDelegate.managedObjectContext.save()
+                let alert = UIAlertController.init(title: "Success", message: "Registered successfully", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Confirm", style: .cancel, handler: {
+                    (action) in self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            } catch {
+                let alert = UIAlertController(title: "Failed", message: "Something error!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Confirm", style: .cancel, handler: {
+                    (action) in self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        } else {
+            let alert = UIAlertController(title: "Failed", message: "Please fill all the text field!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Confirm", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func tapGesture(sender: UITapGestureRecognizer) {
+        if sender.state == .ended { 
+            nameField.resignFirstResponder()
+            accountField.resignFirstResponder()
+            passwordField.resignFirstResponder()
+            idField.resignFirstResponder()
+            workNumberField.resignFirstResponder()
+        }  
+        sender.cancelsTouchesInView = false 
+    }
 }
