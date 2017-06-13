@@ -27,7 +27,9 @@ class UserDetailViewController: UIViewController {
         nameLabel.text = user.name
         accountLabel.text = user.account
         workNumberLabel.text = String(format: "%d", user.workNumber)
-        lastCheckinnLabel.text = getCurDate()
+        let curTime = getCurDate()
+        NSLog("%@", curTime)
+        lastCheckinnLabel.text = curTime
         sexLabel.text = user.sex ? "Male" : "Female"
         // 设置界面数据
         self.navigationItem.title = user.name
@@ -35,13 +37,13 @@ class UserDetailViewController: UIViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
-        
     }
     
     func getCurDate() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-ddHH:mm:ss.SSSZ"
-        return dateFormatter.string(from: Date())
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let curTime = dateFormatter.string(from: Date())
+        return curTime
     }
 
 }
