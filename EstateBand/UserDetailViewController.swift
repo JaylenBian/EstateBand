@@ -17,6 +17,7 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var workNumberLabel: UILabel!
     @IBOutlet weak var lastCheckinnLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var userPic: UIImageView!
     
     //Data
     var user: User!
@@ -33,6 +34,8 @@ class UserDetailViewController: UIViewController {
         sexLabel.text = user.sex ? "Male" : "Female"
         // 设置界面数据
         self.navigationItem.title = user.name
+        self.userPic.layer.cornerRadius = 20
+        self.userPic.image = UIImage(named: self.user.pic!)
     }
 
     

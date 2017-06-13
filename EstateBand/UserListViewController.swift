@@ -110,7 +110,7 @@ class UserListViewController: UIViewController, UITableViewDataSource, UITableVi
 //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier?.hasSuffix("detail"))! {
+        if segue.identifier == "segue2UserDetailView" {
             let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
             let target = segue.destination as! UserDetailViewController
             target.user = userArray[indexPath!.row] as! User

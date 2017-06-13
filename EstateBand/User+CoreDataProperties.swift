@@ -17,13 +17,14 @@ extension User {
     }
 
     @NSManaged public var account: String?
+    @NSManaged public var heartRate: NSSet?
     @NSManaged public var id: Int32
     @NSManaged public var name: String?
     @NSManaged public var password: String?
+    @NSManaged public var pic: String?
     @NSManaged public var restInterval: Int32
     @NSManaged public var sex: Bool
     @NSManaged public var workNumber: Int32
-    @NSManaged public var heartRate: NSSet?
 
 }
 

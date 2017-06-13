@@ -13,6 +13,7 @@ class SignupViewController: UIViewController {
     
     // Widget data
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var accountField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -37,6 +38,9 @@ class SignupViewController: UIViewController {
         
         // 注册收回键盘手势
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGesture)))
+        // 设置控件
+        self.doneButton.layer.cornerRadius = 10
+        self.backButton.layer.cornerRadius = 8
     }
     
     @IBAction func doneAction(_ sender: UIButton) {
@@ -59,11 +63,13 @@ class SignupViewController: UIViewController {
         }
     }
     
+    @IBAction func backAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func saveContext() {
-        
-        
-        //
-        var done = (nameField.text != nil) && (accountField.text != nil) && (passwordField.text != nil) && (idField.text != nil) && (workNumberField.text != nil)
+        // 判断是否填写完毕
+        let done = (nameField.text != nil) && (accountField.text != nil) && (passwordField.text != nil) && (idField.text != nil) && (workNumberField.text != nil)
         if(done) {
             // 保存添加模型
             let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: self.appDelegate.managedObjectContext) as! User
@@ -73,6 +79,7 @@ class SignupViewController: UIViewController {
             user.id = Int32.init(idField.text!)!
             user.workNumber = Int32.init(workNumberField.text!)!
             user.sex = maleButton.state==UIControlState.selected ? true : false
+            user.pic = "Default"
             // 弹窗提醒
             do {
                 try self.appDelegate.managedObjectContext.save()
@@ -106,4 +113,50 @@ class SignupViewController: UIViewController {
         }  
         sender.cancelsTouchesInView = false 
     }
+    
+    @IBAction func addDefaultData(_ sender: UIButton) {
+        // 添加第一个人
+        let user_1 = NSEntityDescription.insertNewObject(forEntityName: "User", into: self.appDelegate.managedObjectContext) as! User
+        user_1.name = "Michael"
+        user_1.account = "micheal123"
+        user_1.password = "password"
+        user_1.id = 10230003
+        user_1.workNumber = 210002
+        user_1.sex = true
+        user_1.pic = "Michael"
+        do {
+            try self.appDelegate.managedObjectContext.save()
+        } catch {
+            NSLog("Save Failed")
+        }
+        // 添加第二个人
+        let user_2 = NSEntityDescription.insertNewObject(forEntityName: "User", into: self.appDelegate.managedObjectContext) as! User
+        user_2.name = "Mike"
+        user_2.account = "mike@cqu.com"
+        user_2.password = "password"
+        user_2.id = 20350012
+        user_2.workNumber = 210003
+        user_2.sex = true
+        user_2.pic = "Mike"
+        do {
+            try self.appDelegate.managedObjectContext.save()
+        } catch {
+            NSLog("Save Failed")
+        }
+        // 添加第三个人
+        let user_3 = NSEntityDescription.insertNewObject(forEntityName: "User", into: self.appDelegate.managedObjectContext) as! User
+        user_3.name = "Steven"
+        user_3.account = "steven@mail.com"
+        user_3.password = "password"
+        user_3.id = 43105128
+        user_3.workNumber = 210004
+        user_3.sex = true
+        user_3.pic = "Steven"
+        do {
+            try self.appDelegate.managedObjectContext.save()
+        } catch {
+            NSLog("Save Failed")
+        }
+    }
+    
 }

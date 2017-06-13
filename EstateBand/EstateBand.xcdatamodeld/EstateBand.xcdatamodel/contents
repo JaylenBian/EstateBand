@@ -10,6 +10,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="restInterval" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sex" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="workNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -17,6 +18,6 @@
     </entity>
     <elements>
         <element name="HeartRate" positionX="-54" positionY="27" width="128" height="88"/>
-        <element name="User" positionX="-353" positionY="-33" width="119" height="165"/>
+        <element name="User" positionX="-353" positionY="-33" width="119" height="180"/>
     </elements>
 </model>
