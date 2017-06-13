@@ -8,27 +8,32 @@
 
 import UIKit
 
-class UserHealthViewController: UIViewController {
-
+class UserHealthViewController: UITableViewController {
+    
+    // Widget Data
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var warningButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 设置导航数据
-        self.navigationItem.title = "Warning management"
+        self.navigationItem.title = "Health Managment"
         // 设置底栏数据
 //        self.tabBarItem.title = "Warning management"
 //        self.tabBarItem.image = UIImage(named: "userHealth")
-        
-        
-        
-        let imageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 200, height: 200))
-        imageView.image = UIImage(named: "userName")
-        self.view.addSubview(imageView)
-        
-        let label = UILabel(frame: CGRect(x: 30, y: 40, width: 300, height: 50))
-        label.text = "Hello world"
-        label.font = UIFont.systemFont(ofSize: 36)
-        self.view.addSubview(label)
     }
+    
+    @IBAction func warnAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func logoutActiuon(_ sender: UIButton) {
+//        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "loginView")
+//        present(loginViewController!, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }

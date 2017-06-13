@@ -61,8 +61,9 @@ class UserListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     @IBAction func logoutAction(_ sender: UIBarButtonItem) {
-        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "loginView")
-        present(loginViewController!, animated: true, completion: nil)
+//        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "loginView")
+//        present(loginViewController!, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - realization of TableViewDataSource
