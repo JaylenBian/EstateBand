@@ -144,7 +144,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="zgm-Je-uhR" kind="relationship" relationship="viewControllers" id="1aY-Qi-irM"/>
-                        <segue destination="4gJ-tQ-yrN" kind="relationship" relationship="viewControllers" id="tlQ-m3-X9r"/>
+                        <segue destination="s0A-T2-0iS" kind="relationship" relationship="viewControllers" id="HqE-UM-54y"/>
+                        <segue destination="4gJ-tQ-yrN" kind="relationship" relationship="viewControllers" id="ACN-Gz-rw7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZa-6p-OBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,15 +231,24 @@
                                 <rect key="frame" x="245" y="78" width="149" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqY-rq-kd6">
-                                <rect key="frame" x="20" y="447" width="374" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HeartRate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmq-GO-Qgv">
+                                <rect key="frame" x="20" y="435" width="199" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KsF-W4-Qnz" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="469" width="374" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="accountLabel" destination="Yum-6a-EVU" id="eWh-dg-eTE"/>
+                        <outlet property="chartView" destination="KsF-W4-Qnz" id="9aT-dI-WWo"/>
                         <outlet property="lastCheckinnLabel" destination="Mdi-0f-882" id="Mmp-HD-9uF"/>
                         <outlet property="nameLabel" destination="c4j-3w-tkM" id="24r-dS-SPf"/>
                         <outlet property="sexLabel" destination="FUn-MY-4rW" id="jF0-x9-sr0"/>
@@ -518,6 +528,25 @@
             </objects>
             <point key="canvasLocation" x="-526" y="770"/>
         </scene>
+        <!--Collection-->
+        <scene sceneID="r0c-uG-Hka">
+            <objects>
+                <viewController id="s0A-T2-0iS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zSD-7w-f9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="sgg-k8-Ck2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G5n-KH-BF0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Collection" badgeValue="ing" id="vLZ-6T-F6U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGC-uH-F4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="990"/>
+        </scene>
         <!--Health-->
         <scene sceneID="dL1-dr-xbV">
             <objects>
@@ -582,18 +611,18 @@
                                         <rect key="frame" x="0.0" y="366" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oas-SK-aFy" id="iut-9D-mCl">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="High Heart Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ntK-n6-tFl">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20"/>
+                                                    <rect key="frame" x="15" y="8.0000000000000018" width="169.33333333333334" height="28.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5a-EY-C0Z">
-                                                    <rect key="frame" x="320.5" y="12" width="58.5" height="20"/>
+                                                    <rect key="frame" x="367.66666666666669" y="14.999999999999998" width="11.333333333333334" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -606,18 +635,18 @@
                                         <rect key="frame" x="0.0" y="410" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yfU-G6-7Wm" id="dfV-c4-7ND">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Need Rest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M33-jr-2G6">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20"/>
+                                                    <rect key="frame" x="15" y="8.0000000000000018" width="111" height="28.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sgu-xo-34c">
-                                                    <rect key="frame" x="320.5" y="12" width="58.5" height="20"/>
+                                                    <rect key="frame" x="367.66666666666669" y="14.999999999999998" width="11.333333333333334" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -630,18 +659,18 @@
                                         <rect key="frame" x="0.0" y="454" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rBP-bE-bKU" id="bcR-Z7-6u2">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Danger Zone Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uye-vm-lv5" userLabel="Danger Zone Alert">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20"/>
+                                                    <rect key="frame" x="15" y="8.0000000000000018" width="195" height="28.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wAc-PV-W9d">
-                                                    <rect key="frame" x="320.5" y="12" width="58.5" height="20"/>
+                                                    <rect key="frame" x="367.66666666666669" y="14.999999999999998" width="11.333333333333334" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -658,7 +687,7 @@
                             <outlet property="delegate" destination="4gJ-tQ-yrN" id="NNy-Ih-OqJ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Health" image="userHealth" badgeValue="Good" selectedImage="userHealth" id="duz-RP-XcI"/>
+                    <tabBarItem key="tabBarItem" title="Health" image="userHealth" selectedImage="userHealth" id="duz-RP-XcI"/>
                     <connections>
                         <outlet property="logoutButton" destination="z2i-aq-4Hx" id="3dF-08-lMN"/>
                         <outlet property="warningButton" destination="WeB-UI-f0a" id="IN3-wd-XO9"/>
@@ -666,7 +695,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXO-lf-95T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302.89855072463769" y="970.92391304347836"/>
+            <point key="canvasLocation" x="1070" y="990"/>
         </scene>
         <!--Worker-->
         <scene sceneID="gZB-hg-OXc">
