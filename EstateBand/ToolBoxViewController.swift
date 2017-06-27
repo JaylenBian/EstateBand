@@ -19,14 +19,14 @@ class ToolBoxViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        setupUI()
     }
     
     func setupUI() {
         
-        self.checkButton.layer.cornerRadius = 30
-        self.gpsButton.layer.cornerRadius = 30
-        self.compassButton.layer.cornerRadius = 30
+        self.checkButton.layer.cornerRadius = 10
+        self.gpsButton.layer.cornerRadius = 10
+        self.compassButton.layer.cornerRadius = 10
         
     }
     

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Thread.sleep(forTimeInterval: 1.0)
+        
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (success, error) in
+            if success {
+                print("success")
+            } else {
+                print("error")
+            }
+        }        
+        
+//        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)  
+//            completionHandler:^(BOOL granted, NSError * _Nullable error) {  
+//            // Enable or disable features based on authorization.  
+////            }];  
+        
         return true
     }
 

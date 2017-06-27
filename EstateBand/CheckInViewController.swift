@@ -38,6 +38,7 @@ class CheckInViewController: UIViewController {
         backgroundLayer.endPoint = CGPoint(x: 0.5, y: 1)
         backgroundLayer.frame = self.view.bounds
         self.view.layer.addSublayer(backgroundLayer)
+        self.view.bringSubview(toFront: button)
         
         checkBox = BEMCheckBox(frame: CGRect(x: 100, y: 300, width: 200, height: 200))
         checkBox.on = false
@@ -57,6 +58,8 @@ class CheckInViewController: UIViewController {
     @IBAction func checkAction(_ sender: UIButton) {
         
         self.checkedAction()
+        self.button.setTitle("Successful", for: .normal)
+        
     }
     
     
