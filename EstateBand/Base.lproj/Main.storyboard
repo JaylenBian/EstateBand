@@ -547,6 +547,9 @@
                                 <state key="normal" title="Rest">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="restAction:" destination="KPM-OU-TzG" eventType="touchUpInside" id="W7O-a5-cNG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX0-cv-7Vq">
                                 <rect key="frame" x="20" y="546" width="100" height="100"/>
@@ -556,6 +559,9 @@
                                 <state key="normal" title="SOS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sosAction:" destination="KPM-OU-TzG" eventType="touchUpInside" id="Af9-Vh-Rpu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-Mu-Wdf">
                                 <rect key="frame" x="294" y="546" width="100" height="100"/>
@@ -565,6 +571,9 @@
                                 <state key="normal" title="Refresh">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="refreshAction:" destination="KPM-OU-TzG" eventType="touchUpInside" id="Lp1-Ep-3nA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You need rest now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik0-ZX-Usd">
                                 <rect key="frame" x="75" y="104" width="263" height="21"/>
@@ -585,6 +594,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="h1F-Uw-ZFO"/>
                     <connections>
+                        <outlet property="healthyLabel" destination="D5F-1R-GY3" id="cvI-eV-L6R"/>
+                        <outlet property="notiLabel" destination="Ik0-ZX-Usd" id="6Vz-Uy-TQ6"/>
                         <outlet property="refreshButton" destination="ZWz-Mu-Wdf" id="rfU-qg-u85"/>
                         <outlet property="restButton" destination="i0Z-JY-YPy" id="j9X-xv-oQM"/>
                         <outlet property="sosButton" destination="LX0-cv-7Vq" id="QXe-0R-Trf"/>

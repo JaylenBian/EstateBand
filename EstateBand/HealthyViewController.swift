@@ -14,6 +14,9 @@ class HealthyViewController: UIViewController {
     @IBOutlet weak var sosButton: UIButton!
     @IBOutlet weak var restButton: UIButton!
     @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var healthyLabel: UILabel!
+    @IBOutlet weak var notiLabel: UILabel!
+    
     
     
     override func viewDidLoad() {
@@ -29,5 +32,19 @@ class HealthyViewController: UIViewController {
         refreshButton.layer.cornerRadius = 50
         
     }
+    
+    @IBAction func sosAction(_ sender: UIButton) {
+        
+    }
+    
+    
+    @IBAction func restAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func refreshAction(_ sender: UIButton) {
+        
+    }
+    
     
 }
