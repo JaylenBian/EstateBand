@@ -32,8 +32,14 @@ class CheckInViewController: UIViewController {
 //    [self.view addSubview:myCheckBox];
     
     func setupUI() {
+        let backgroundLayer = CAGradientLayer()
+        backgroundLayer.colors = [UIColor.green.cgColor, UIColor.white.cgColor]
+        backgroundLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        backgroundLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        backgroundLayer.frame = self.view.bounds
+        self.view.layer.addSublayer(backgroundLayer)
         
-        checkBox = BEMCheckBox(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
+        checkBox = BEMCheckBox(frame: CGRect(x: 100, y: 300, width: 200, height: 200))
         checkBox.on = false
         checkBox.boxType = .circle
         checkBox.onAnimationType = .fill
