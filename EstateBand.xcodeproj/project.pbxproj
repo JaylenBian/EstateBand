@@ -22,6 +22,10 @@
 		E75392421F01FDA500E16CF5 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E753923E1F01FDA500E16CF5 /* BEMPathManager.m */; };
 		E75392441F0213C700E16CF5 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75392431F0213C700E16CF5 /* UserNotifications.framework */; };
 		E75392461F02191A00E16CF5 /* UserCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75392451F02191A00E16CF5 /* UserCollectionViewController.swift */; };
+		E75392481F023CCE00E16CF5 /* UserPerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75392471F023CCE00E16CF5 /* UserPerformanceViewController.swift */; };
+		E753924A1F02410600E16CF5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75392491F02410600E16CF5 /* MapKit.framework */; };
+		E753924C1F02411B00E16CF5 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753924B1F02411B00E16CF5 /* MeViewController.swift */; };
+		E753924E1F02498A00E16CF5 /* HealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753924D1F02498A00E16CF5 /* HealthyViewController.swift */; };
 		E7C378251EEC84E400E98D15 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C378241EEC84E400E98D15 /* SignupViewController.swift */; };
 		E7C378281EEC9E3500E98D15 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */; };
 		E7C3782A1EED4D8400E98D15 /* LoginBackground.gif in Resources */ = {isa = PBXBuildFile; fileRef = E7C378291EED4D8400E98D15 /* LoginBackground.gif */; };
@@ -110,6 +114,10 @@
 		E753923E1F01FDA500E16CF5 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
 		E75392431F0213C700E16CF5 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		E75392451F02191A00E16CF5 /* UserCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewController.swift; sourceTree = "<group>"; };
+		E75392471F023CCE00E16CF5 /* UserPerformanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPerformanceViewController.swift; sourceTree = "<group>"; };
+		E75392491F02410600E16CF5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E753924B1F02411B00E16CF5 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		E753924D1F02498A00E16CF5 /* HealthyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthyViewController.swift; sourceTree = "<group>"; };
 		E7C378241EEC84E400E98D15 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		E7C378291EED4D8400E98D15 /* LoginBackground.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = LoginBackground.gif; path = Resource/LoginBackground.gif; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E753924A1F02410600E16CF5 /* MapKit.framework in Frameworks */,
 				E75392441F0213C700E16CF5 /* UserNotifications.framework in Frameworks */,
 				E7C378281EEC9E3500E98D15 /* CoreBluetooth.framework in Frameworks */,
 				E7C6FBA81EF057C900114396 /* Charts.framework in Frameworks */,
@@ -177,6 +186,7 @@
 		E7C378261EEC9E3500E98D15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E75392491F02410600E16CF5 /* MapKit.framework */,
 				E75392431F0213C700E16CF5 /* UserNotifications.framework */,
 				E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */,
 			);
@@ -239,6 +249,9 @@
 				E75392451F02191A00E16CF5 /* UserCollectionViewController.swift */,
 				E704DD0A1EEEB0F700713BA6 /* UserHealthViewController.swift */,
 				E7CDA0BD1EEC59B90061E72F /* Main.storyboard */,
+				E753924D1F02498A00E16CF5 /* HealthyViewController.swift */,
+				E753924B1F02411B00E16CF5 /* MeViewController.swift */,
+				E75392471F023CCE00E16CF5 /* UserPerformanceViewController.swift */,
 				E753922F1F01F6E700E16CF5 /* ToolBoxViewController.swift */,
 				E75392311F01F77000E16CF5 /* CheckInViewController.swift */,
 				E7CDA0C31EEC59B90061E72F /* Assets.xcassets */,
@@ -440,14 +453,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7CDA0BC1EEC59B90061E72F /* ViewController.swift in Sources */,
+				E75392481F023CCE00E16CF5 /* UserPerformanceViewController.swift in Sources */,
 				E704DD061EEE7C9900713BA6 /* HeartRate.swift in Sources */,
 				E7CDA0C21EEC59B90061E72F /* EstateBand.xcdatamodeld in Sources */,
 				E753923F1F01FDA500E16CF5 /* BEMAnimationManager.m in Sources */,
+				E753924E1F02498A00E16CF5 /* HealthyViewController.swift in Sources */,
 				E704DD051EEE7C9900713BA6 /* User+CoreDataProperties.swift in Sources */,
 				E75392411F01FDA500E16CF5 /* BEMCheckBoxGroup.m in Sources */,
 				E704DCFB1EEE47BD00713BA6 /* UserListViewController.swift in Sources */,
 				E704DCFD1EEE6EF600713BA6 /* UserDetailViewController.swift in Sources */,
 				E704DD071EEE7C9900713BA6 /* HeartRate+CoreDataProperties.swift in Sources */,
+				E753924C1F02411B00E16CF5 /* MeViewController.swift in Sources */,
 				E7C378251EEC84E400E98D15 /* SignupViewController.swift in Sources */,
 				E75392421F01FDA500E16CF5 /* BEMPathManager.m in Sources */,
 				E75392461F02191A00E16CF5 /* UserCollectionViewController.swift in Sources */,
