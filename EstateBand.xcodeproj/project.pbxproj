@@ -14,6 +14,12 @@
 		E704DD061EEE7C9900713BA6 /* HeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704DD031EEE7C9900713BA6 /* HeartRate.swift */; };
 		E704DD071EEE7C9900713BA6 /* HeartRate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704DD041EEE7C9900713BA6 /* HeartRate+CoreDataProperties.swift */; };
 		E704DD0B1EEEB0F700713BA6 /* UserHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704DD0A1EEEB0F700713BA6 /* UserHealthViewController.swift */; };
+		E75392301F01F6E700E16CF5 /* ToolBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753922F1F01F6E700E16CF5 /* ToolBoxViewController.swift */; };
+		E75392321F01F77000E16CF5 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75392311F01F77000E16CF5 /* CheckInViewController.swift */; };
+		E753923F1F01FDA500E16CF5 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E75392381F01FDA500E16CF5 /* BEMAnimationManager.m */; };
+		E75392401F01FDA500E16CF5 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = E753923A1F01FDA500E16CF5 /* BEMCheckBox.m */; };
+		E75392411F01FDA500E16CF5 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E753923C1F01FDA500E16CF5 /* BEMCheckBoxGroup.m */; };
+		E75392421F01FDA500E16CF5 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E753923E1F01FDA500E16CF5 /* BEMPathManager.m */; };
 		E7C378251EEC84E400E98D15 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C378241EEC84E400E98D15 /* SignupViewController.swift */; };
 		E7C378281EEC9E3500E98D15 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */; };
 		E7C3782A1EED4D8400E98D15 /* LoginBackground.gif in Resources */ = {isa = PBXBuildFile; fileRef = E7C378291EED4D8400E98D15 /* LoginBackground.gif */; };
@@ -89,6 +95,17 @@
 		E704DD031EEE7C9900713BA6 /* HeartRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRate.swift; sourceTree = "<group>"; };
 		E704DD041EEE7C9900713BA6 /* HeartRate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HeartRate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E704DD0A1EEEB0F700713BA6 /* UserHealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHealthViewController.swift; sourceTree = "<group>"; };
+		E753922F1F01F6E700E16CF5 /* ToolBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBoxViewController.swift; sourceTree = "<group>"; };
+		E75392311F01F77000E16CF5 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		E75392361F01FDA400E16CF5 /* EstateBand-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EstateBand-Bridging-Header.h"; sourceTree = "<group>"; };
+		E75392371F01FDA500E16CF5 /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMAnimationManager.h; path = Classes/BEMAnimationManager.h; sourceTree = "<group>"; };
+		E75392381F01FDA500E16CF5 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMAnimationManager.m; path = Classes/BEMAnimationManager.m; sourceTree = "<group>"; };
+		E75392391F01FDA500E16CF5 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMCheckBox.h; path = Classes/BEMCheckBox.h; sourceTree = "<group>"; };
+		E753923A1F01FDA500E16CF5 /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBox.m; path = Classes/BEMCheckBox.m; sourceTree = "<group>"; };
+		E753923B1F01FDA500E16CF5 /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMCheckBoxGroup.h; path = Classes/BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		E753923C1F01FDA500E16CF5 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBoxGroup.m; path = Classes/BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		E753923D1F01FDA500E16CF5 /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMPathManager.h; path = Classes/BEMPathManager.h; sourceTree = "<group>"; };
+		E753923E1F01FDA500E16CF5 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
 		E7C378241EEC84E400E98D15 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E7C378271EEC9E3500E98D15 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		E7C378291EED4D8400E98D15 /* LoginBackground.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = LoginBackground.gif; path = Resource/LoginBackground.gif; sourceTree = "<group>"; };
@@ -136,6 +153,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E75392351F01FD7900E16CF5 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				E75392371F01FDA500E16CF5 /* BEMAnimationManager.h */,
+				E75392381F01FDA500E16CF5 /* BEMAnimationManager.m */,
+				E75392391F01FDA500E16CF5 /* BEMCheckBox.h */,
+				E753923A1F01FDA500E16CF5 /* BEMCheckBox.m */,
+				E753923B1F01FDA500E16CF5 /* BEMCheckBoxGroup.h */,
+				E753923C1F01FDA500E16CF5 /* BEMCheckBoxGroup.m */,
+				E753923D1F01FDA500E16CF5 /* BEMPathManager.h */,
+				E753923E1F01FDA500E16CF5 /* BEMPathManager.m */,
+				E75392361F01FDA400E16CF5 /* EstateBand-Bridging-Header.h */,
+			);
+			name = CheckBox;
+			sourceTree = "<group>";
+		};
 		E7C378261EEC9E3500E98D15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +221,7 @@
 		E7CDA0B81EEC59B90061E72F /* EstateBand */ = {
 			isa = PBXGroup;
 			children = (
+				E75392351F01FD7900E16CF5 /* CheckBox */,
 				E7C6FB9F1EF057B000114396 /* Charts.xcodeproj */,
 				E7C378301EED919900E98D15 /* Model */,
 				E7CDA0EE1EEC67830061E72F /* Resource */,
@@ -198,6 +232,8 @@
 				E704DCFC1EEE6EF600713BA6 /* UserDetailViewController.swift */,
 				E704DD0A1EEEB0F700713BA6 /* UserHealthViewController.swift */,
 				E7CDA0BD1EEC59B90061E72F /* Main.storyboard */,
+				E753922F1F01F6E700E16CF5 /* ToolBoxViewController.swift */,
+				E75392311F01F77000E16CF5 /* CheckInViewController.swift */,
 				E7CDA0C31EEC59B90061E72F /* Assets.xcassets */,
 				E7CDA0C51EEC59B90061E72F /* LaunchScreen.storyboard */,
 				E7CDA0C81EEC59B90061E72F /* Info.plist */,
@@ -302,7 +338,7 @@
 				TargetAttributes = {
 					E7CDA0B51EEC59B90061E72F = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = XQ4VPYFFH5;
+						DevelopmentTeam = 3MWYB63ZVX;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -399,14 +435,20 @@
 				E7CDA0BC1EEC59B90061E72F /* ViewController.swift in Sources */,
 				E704DD061EEE7C9900713BA6 /* HeartRate.swift in Sources */,
 				E7CDA0C21EEC59B90061E72F /* EstateBand.xcdatamodeld in Sources */,
+				E753923F1F01FDA500E16CF5 /* BEMAnimationManager.m in Sources */,
 				E704DD051EEE7C9900713BA6 /* User+CoreDataProperties.swift in Sources */,
+				E75392411F01FDA500E16CF5 /* BEMCheckBoxGroup.m in Sources */,
 				E704DCFB1EEE47BD00713BA6 /* UserListViewController.swift in Sources */,
 				E704DCFD1EEE6EF600713BA6 /* UserDetailViewController.swift in Sources */,
 				E704DD071EEE7C9900713BA6 /* HeartRate+CoreDataProperties.swift in Sources */,
 				E7C378251EEC84E400E98D15 /* SignupViewController.swift in Sources */,
+				E75392421F01FDA500E16CF5 /* BEMPathManager.m in Sources */,
+				E75392401F01FDA500E16CF5 /* BEMCheckBox.m in Sources */,
+				E75392301F01F6E700E16CF5 /* ToolBoxViewController.swift in Sources */,
 				E704DD0B1EEEB0F700713BA6 /* UserHealthViewController.swift in Sources */,
 				E704DD001EEE7C2D00713BA6 /* User.swift in Sources */,
 				E7CDA0BA1EEC59B90061E72F /* AppDelegate.swift in Sources */,
+				E75392321F01F77000E16CF5 /* CheckInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,13 +608,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = XQ4VPYFFH5;
+				DEVELOPMENT_TEAM = 3MWYB63ZVX;
 				INFOPLIST_FILE = EstateBand/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.minecode.EstateBand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EstateBand/EstateBand-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -585,13 +627,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = XQ4VPYFFH5;
+				DEVELOPMENT_TEAM = 3MWYB63ZVX;
 				INFOPLIST_FILE = EstateBand/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.minecode.EstateBand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EstateBand/EstateBand-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
