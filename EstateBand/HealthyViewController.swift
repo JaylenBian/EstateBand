@@ -17,7 +17,8 @@ class HealthyViewController: UIViewController {
     @IBOutlet weak var healthyLabel: UILabel!
     @IBOutlet weak var notiLabel: UILabel!
     
-    
+    // 数据
+    var rate: Int = 85
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class HealthyViewController: UIViewController {
         restButton.layer.cornerRadius = 50
         refreshButton.layer.cornerRadius = 50
         
+        self.notiLabel.textColor = UIColor.green
+        self.notiLabel.text = "Healthy"
+        
+        self.healthyLabel.textColor = UIColor.green
+        self.healthyLabel.text = String(rate)
     }
     
     @IBAction func sosAction(_ sender: UIButton) {
@@ -43,7 +49,20 @@ class HealthyViewController: UIViewController {
     }
     
     @IBAction func refreshAction(_ sender: UIButton) {
+        let arc = arc4random_uniform(10)
+        rate += Int(arc)
         
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(1.0)
+        
+        healthyLabel.text = String(rate)
+        if rate >= 100 {
+            healthyLabel.textColor = UIColor.red
+            notiLabel.textColor = UIColor.red
+            notiLabel.text = String("You need rest now!")
+        }
+        
+        UIView.commitAnimations()
     }
     
     

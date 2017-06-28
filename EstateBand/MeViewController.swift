@@ -13,6 +13,8 @@ class MeViewController: UIViewController {
     
     // 控件
     @IBOutlet weak var mapKit: MKMapView!
+    @IBOutlet weak var safeLabel: UILabel!
+    @IBOutlet weak var msgLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -49,4 +51,17 @@ class MeViewController: UIViewController {
         self.mapKit.addAnnotation(objectAnnotation)
     }
 
+    
+    @IBAction func alertAction(_ sender: UIButton) {
+        
+        safeLabel.textColor = UIColor.red
+        safeLabel.text = "Danger"
+        
+        msgLabel.text = "You are in dangerous zone!"
+        
+        let alert = UIAlertController(title: "Warning", message: "You are in dangerous area", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Confirm", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }

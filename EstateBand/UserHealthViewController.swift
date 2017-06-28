@@ -29,9 +29,9 @@ class UserHealthViewController: UITableViewController {
     @IBAction func warnAction(_ sender: UIButton) {
         let content = UNMutableNotificationContent()
         content.sound = UNNotificationSound.default();
-        content.title = "Healthy Warning"
-        content.subtitle = "Heart Rate"
-        content.body = "A man's healthy status is abnormal"
+        content.title = "Alert"
+        content.subtitle = "Dangrous area"
+        content.body = "One worker in dangerous area!"
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: "identifer", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
