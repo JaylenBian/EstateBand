@@ -37,16 +37,6 @@ class UserListViewController: UIViewController, UITableViewDataSource, UITableVi
         self.automaticallyAdjustsScrollViewInsets = false
         self.tableView.dataSource = self
         // 设置界面数据
-        
-        
-        Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(showAlert), userInfo: nil, repeats: false)
-    }
-    
-    func showAlert() {
-        
-        let alert = UIAlertController(title: "SOS", message: "Recive a SOS message", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Confirm", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil) 
     }
     
     override func viewWillAppear(_ animated: Bool) {
