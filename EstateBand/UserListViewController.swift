@@ -9,8 +9,6 @@
 import UIKit
 import CoreData
 
-
-
 class UserListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Widget List
